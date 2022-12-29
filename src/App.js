@@ -1,23 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import awsconfig from './aws-exports';
+
+import { Amplify } from 'aws-amplify';
+import { Route, Routes } from 'react-router-dom';
+import NavBar from './components/NavBar';
+import Login from './components/Login';
+import Register from './components/Register';
+import StockContent from './components/StockContent';
+
+Amplify.configure(awsconfig);
 
 function App() {
+  const CognitoUser = null;
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="trading-container">
+        <NavBar />
+        <div className="content-container">
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/stocks" element={<StockContent />} />
+          </Routes>
+        </div>
+      </div>
     </div>
   );
 }
