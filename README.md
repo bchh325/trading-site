@@ -1,6 +1,7 @@
 # Mimic Stock Watchlist
 
 ## Technologies Used
-### AWS: Lambda/API Gateway/DynamoDB/Cognito
-### Axios 
+* React
+* AWS: Lambda/API Gateway/DynamoDB/Cognito
+* Axios 
 
