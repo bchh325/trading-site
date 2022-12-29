@@ -17,5 +17,5 @@
 * POST/GET Lambda Functions to perform CRUD operations on DynamoDB
 * Request to Stock Market APIs after reading from DynamoDB
 * Refactor/Create custom hook to work with both API Gateway and Stock Market API
-* Make it look prettier after adding functionality
 * Add additional Lambda function for deleting user's tracked tickers
+* Make it look prettier after adding functionality
