@@ -1,5 +1,8 @@
 # Stock Watchlist
 
+Currently in the works is simple stock ticker price tracking,
+and eventually the goal would be to have mimic trading functionality.
+
 ## Technologies Used
 * React
 * AWS: Lambda/API Gateway/DynamoDB/Cognito
@@ -17,4 +20,5 @@
 * POST/GET Lambda Functions to perform CRUD operations on DynamoDB
 * Request to Stock Market APIs after reading from DynamoDB
 * Refactor/Create custom hook to work with both API Gateway and Stock Market API
+* Trading functionality after completion of Watchlist
 * Make it look prettier after adding functionality
