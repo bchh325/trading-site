@@ -5,7 +5,7 @@ and eventually the goal would be to have mimic trading functionality.
 
 ## Technologies Used
 * React
-* AWS: Lambda/API Gateway/DynamoDB/Cognito
+* AWS: Lambda/API Gateway/DynamoDB/Cognito/Secrets Manager
 * Axios 
 
 ## Completed Tasks
@@ -15,6 +15,7 @@ and eventually the goal would be to have mimic trading functionality.
 * User Authorized API Calls to HTTP API using JWT Token
 * AWS Lambda Functions trigger given HTTP request type
 * Custom hook using Axios to make HTTP requests
+* Stored API Key in AWS Secrets Manager to use within Lambda function
 
 ## Planned Tasks
 * POST/GET Lambda Functions to perform CRUD operations on DynamoDB
