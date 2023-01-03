@@ -22,5 +22,5 @@ and eventually the goal would be to have mimic trading functionality.
 * Request to Stock Market APIs after reading from DynamoDB
 * Refactor/Create custom hook to work with both API Gateway and Stock Market API
 * Trading functionality after completion of Watchlist
-* Add additional routes for stock ticker verification
-* Make it look prettier after adding functionality
+* Add additional API Gateway routes for stock ticker verification
+
