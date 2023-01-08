@@ -20,6 +20,7 @@ and eventually the goal would be to have mimic trading functionality.
 * Request to Stock Market API in Lambda after reading from DynamoDB
 
 ## Planned Tasks
+* Refactor Lambda Functions
 * POST/GET Lambda Functions to perform CRUD operations on DynamoDB
 * ~~Request to Stock Market API in Lambda after reading from DynamoDB~~
 * ~~Refactor/Create custom hook to work with both API Gateway and Stock Market API~~
