@@ -17,11 +17,11 @@ and eventually the goal would be to have mimic trading functionality.
 * Custom hook using Axios to make HTTP requests
 * Stored API Key in AWS Secrets Manager to use within Lambda function
 * Refactor/Create custom hook to work with both API Gateway and Stock Market API[^1]
-* Request to Stock Market APIs after reading from DynamoDB
+* Request to Stock Market API in Lambda after reading from DynamoDB
 
 ## Planned Tasks
 * POST/GET Lambda Functions to perform CRUD operations on DynamoDB
-* ~~Request to Stock Market APIs after reading from DynamoDB~~
+* ~~Request to Stock Market API in Lambda after reading from DynamoDB~~
 * ~~Refactor/Create custom hook to work with both API Gateway and Stock Market API~~
 * Trading functionality after completion of Watchlist
 * Add additional API Gateway routes for stock ticker verification
