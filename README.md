@@ -26,8 +26,6 @@ and eventually the goal would be to have mimic trading functionality.
 * Trading functionality after completion of Watchlist
 * Add additional API Gateway routes for stock ticker verification
 
-## Additional Notes
-
-[^1]: New approach was made for the Finnhub Stock Market API requests.
-  Key was gathered from Secrets Manager and requests/responses were handled from
+[^1]: New approach was made for the Finnhub Stock Market API requests.<br> 
+  Key was gathered from Secrets Manager and requests/responses were handled from<br> 
   Lambda function instead.
