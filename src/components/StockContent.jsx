@@ -27,7 +27,7 @@ export default function StockContent() {
     }
 
     const response = useRequestHandler(requestParams)
-
+    //refactoring planned
     useEffect(() => {
         if (response !== null) {
             console.log(JSON.parse(response.data.body))
@@ -48,7 +48,7 @@ export default function StockContent() {
             { data && Object.keys(data).map((key) => {
                 const dataString = JSON.stringify(data[key])
                 if (data) {
-                    return <p>{key}: {dataString}</p>
+                    return <p key={key}>{key}: {dataString}</p>
                 }
             })}
         </div>
