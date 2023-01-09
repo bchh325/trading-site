@@ -22,6 +22,9 @@ and eventually the goal would be to have mimic trading functionality.
 * GET Request: Displayed different tickers based on users on React client[^2]
 
 ## Planned Tasks
+* Create a way to use the app without logging in
+* Cache responses to improve load times on subsequent API calls (such as on page change or reload)
+* Create corresponding POST Lambda function to update user's stock tickers.
 * Refactor Lambda Functions
 * Complete POST/GET Lambda Functions to perform CRUD operations on DynamoDB
 * ~~Request to Stock Market API in Lambda after reading from DynamoDB~~
