@@ -14,6 +14,7 @@ export default function StockContent() {
     }
     */
     const [data, setData] = useState(null)
+    const [dataNull, setDataNull] = useState(true)
     const [inputParams, setInputParams] = useState({
         username: "test_username",
         tickerToAdd: "AAPL"
@@ -24,10 +25,32 @@ export default function StockContent() {
         route: "user/tickers",
         data: inputParams
     }
-    
-    console.log(useRequestHandler(requestParams))
+
+    const response = useRequestHandler(requestParams)
+
+    useEffect(() => {
+        if (response !== null) {
+            console.log(JSON.parse(response.data.body))
+            setData(JSON.parse(response.data.body))
+            setDataNull(false)
+        }
+    }, [response])
+
+    console.log("IN", typeof data)
+    if (data !== null) {
+        console.log(Object.keys(data))
+    }
 
     return (
-        <div>APITest</div>
+        <div>
+            Test
+            <br></br>
+            { data && Object.keys(data).map((key) => {
+                const dataString = JSON.stringify(data[key])
+                if (data) {
+                    return <p>{key}: {dataString}</p>
+                }
+            })}
+        </div>
     )
 }

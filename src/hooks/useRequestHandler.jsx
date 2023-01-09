@@ -76,8 +76,7 @@ const useRequestHandler = (requestParams) => {
     //         alert('AUTH_KEY invalid')
     //     }
     // }
-
-    return [data]
+    return data
 }
 
 export default useRequestHandler;
