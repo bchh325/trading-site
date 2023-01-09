@@ -29,4 +29,4 @@ and eventually the goal would be to have mimic trading functionality.
 
 [^1]: New approach was made for the Finnhub Stock Market API requests.<br> 
   Key was gathered from Secrets Manager and requests/responses were handled from<br> 
-  Lambda function instead.
+  Lambda function instead using Axios as a Lambda layer.
