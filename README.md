@@ -18,7 +18,7 @@ and eventually the goal would be to have mimic trading functionality.
 * Stored API Key in AWS Secrets Manager to use within Lambda function
 * Refactor/Create custom hook to work with both API Gateway and Stock Market API[^1]
 * Request to Stock Market API in Lambda after reading from DynamoDB
-* GET Request: Displayed different tickers based on user on React client[^2]
+* GET Request: Displayed different tickers based on users on React client[^2]
 
 ## Planned Tasks
 * Refactor Lambda Functions
