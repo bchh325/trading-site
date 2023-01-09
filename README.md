@@ -1,7 +1,9 @@
 # Stock Watchlist
 
-Currently in the works is simple stock ticker price tracking,
-and eventually the goal would be to have mimic trading functionality.
+Currently in the works is my first full-stack 
+application, a simple stock ticker price tracker.
+Optionally, a goal would be to have mimic trading functionality
+if the time permits.
 
 ## Technologies Used
 * React
