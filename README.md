@@ -26,13 +26,13 @@ if the time permits.
 ## Planned Tasks
 * Create a way to use the app without logging in
 * Cache responses to improve load times on subsequent API calls (such as on page change or reload)
-* Create corresponding POST Lambda function to update user's stock tickers.
+* Create corresponding POST Lambda function to update user's stock tickers
 * Refactor Lambda Functions
 * Complete POST/GET Lambda Functions to perform CRUD operations on DynamoDB
 * ~~Request to Stock Market API in Lambda after reading from DynamoDB~~
 * ~~Refactor/Create custom hook to work with both API Gateway and Stock Market API~~
 * Trading functionality after completion of Watchlist
-* Add additional API Gateway routes for stock ticker verification
+* Verify valid stock tickers to prevent API calls with an invalid ticker
 
 [^1]: Original approach was to make Finnhub API calls from the client,<br>
   but given that an API key is required, a new approach<br>
