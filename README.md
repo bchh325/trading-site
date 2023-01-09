@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# Stock Watchlist
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Currently in the works is simple stock ticker price tracking,
+and eventually the goal would be to have mimic trading functionality.
 
-## Available Scripts
+## Technologies Used
+* React
+* AWS: Lambda/API Gateway/DynamoDB/Cognito/Secrets Manager
+* Axios 
 
-In the project directory, you can run:
+## Completed Tasks
+* User Registration
+* User Authentication
+* HTTP API using API Gateway
+* User Authorized API Calls to HTTP API using JWT Token
+* AWS Lambda Functions trigger given HTTP request type
+* Custom hook using Axios to make HTTP requests
+* Stored API Key in AWS Secrets Manager to use within Lambda function
+* Refactor/Create custom hook to work with both API Gateway and Stock Market API[^1]
+* Request to Stock Market API in Lambda after reading from DynamoDB
 
-### `npm start`
+## Planned Tasks
+* Refactor Lambda Functions
+* POST/GET Lambda Functions to perform CRUD operations on DynamoDB
+* ~~Request to Stock Market API in Lambda after reading from DynamoDB~~
+* ~~Refactor/Create custom hook to work with both API Gateway and Stock Market API~~
+* Trading functionality after completion of Watchlist
+* Add additional API Gateway routes for stock ticker verification
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[^1]: New approach was made for the Finnhub Stock Market API requests.<br> 
+  API Key was gathered from Secrets Manager and requests/responses were handled from<br> 
+  Lambda function instead using Axios as its Lambda layer.
