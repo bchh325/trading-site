@@ -26,7 +26,7 @@ if the time permits.
 * Refactored the Lambda function, also uploaded repo of it[^3]
 
 ## Planned Tasks (I always find something to add to this list)
-* Refactor React calls to API Gateway
+* Refactor React calls to API Gateway[^4]
 * Create a way to get authorization for API Gateway calls without logging in
 * Cache responses to improve load times on subsequent API calls (such as on page change or reload)
 * Create corresponding POST Lambda function to update user's stock tickers
@@ -53,3 +53,6 @@ if the time permits.
   tasks. Another additional ES module could be added for Axios.<br>
   https://github.com/bchh325/get-lambda-function
   
+[^4]: The plan is to request from API Gateway as soon as the user logs in, then cache the response. This way,<br>
+  When the user get's redirected to the watchlist page (which is where I am currently making the request), <br>
+  the data is loaded in much faster. 
