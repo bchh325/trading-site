@@ -10,6 +10,7 @@ if the time permits.
 * React
 * AWS: Lambda/API Gateway/DynamoDB/Cognito/Secrets Manager
 * Axios 
+* [Finnhub's Stock Market API](https://finnhub.io/docs/api)
 
 ## Completed Tasks
 * User Registration
