@@ -22,6 +22,7 @@ if the time permits.
 * Create Lambda Layer to use Axios
 * Request to Stock Market API in Lambda after reading from DynamoDB
 * GET Request: Displayed different tickers based on users on React client[^2]
+* Refactored the Lambda function, also uploaded repo of it[^3]
 
 ## Planned Tasks
 * Create a way to use the app without logging in
@@ -48,3 +49,9 @@ if the time permits.
   5\. Lambda function retreives Finnhub API Key from Secrets Manager<br>
   6\. Lambda function makes Axios API request to Finnhub API using previous API Key and ticker data.<br>
   7\. Stock market data for the given tickers are sent back in the body of the Lambda response<br>
+  
+[^3]: One entire ES module was used initially to get the technologies working.<br>
+  It was then refactored by creating two additional ES modules to handle async<br>
+  tasks. Another additional ES module could be added for Axios.<br>
+  https://github.com/bchh325/get-lambda-function
+  
