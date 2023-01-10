@@ -24,7 +24,7 @@ if the time permits.
 * GET Request: Displayed different tickers based on users on React client[^2]
 * Refactored the Lambda function, also uploaded repo of it[^3]
 
-## Planned Tasks
+## Planned Tasks (I always find something to add to this list)
 * Create a way to get authorization for API Gateway calls without logging in
 * Cache responses to improve load times on subsequent API calls (such as on page change or reload)
 * Create corresponding POST Lambda function to update user's stock tickers
