@@ -6,6 +6,7 @@ Optionally, a goal would be to have mimic trading functionality
 if the time permits.
 
 ## Technologies Used
+* Node.js
 * React
 * AWS: Lambda/API Gateway/DynamoDB/Cognito/Secrets Manager
 * Axios 
