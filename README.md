@@ -26,7 +26,7 @@ if the time permits.
 * Refactored the Lambda function, also uploaded repo of it[^3]
 
 ## Planned Tasks (I always find something to add to this list)
-* Refactor React calls to API Gateway[^4]
+* Refactor React calls to API Gateway (for increased speed and readability)[^4]
 * Create a way to get authorization for API Gateway calls without logging in
 * Cache responses to improve load times on subsequent API calls (such as on page change or reload)
 * Create corresponding POST Lambda function to update user's stock tickers
