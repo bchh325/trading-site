@@ -17,9 +17,9 @@ if the time permits.
 * HTTP API using API Gateway
 * User Authorized API Calls to HTTP API using JWT Token
 * AWS Lambda Functions trigger given HTTP request type
-* Custom hook using Axios to make HTTP requests
+* Custom hook in React using Axios to make HTTP requests
 * Stored API Key in AWS Secrets Manager to use within Lambda function
-* Refactor/Create custom hook to work with both API Gateway and Stock Market API[^1]
+* Requests/Rsponses to/from Finnhub API through Lambda[^1]
 * Create Lambda Layer to use Axios
 * Request to Stock Market API in Lambda after reading from DynamoDB
 * GET Request: Displayed different tickers based on users on React client[^2]
