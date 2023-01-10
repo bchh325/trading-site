@@ -28,10 +28,7 @@ if the time permits.
 * Create a way to get authorization for API Gateway calls without logging in
 * Cache responses to improve load times on subsequent API calls (such as on page change or reload)
 * Create corresponding POST Lambda function to update user's stock tickers
-* ~~Refactor Lambda Function~~
 * Complete POST/GET Lambda Functions to perform CRUD operations on DynamoDB
-* ~~Request to Stock Market API in Lambda after reading from DynamoDB~~
-* ~~Refactor/Create custom hook to work with both API Gateway and Stock Market API~~
 * Trading functionality after completion of Watchlist
 * Verify valid stock tickers to prevent API calls with an invalid ticker
 
