@@ -19,9 +19,8 @@ if the time permits.
 * AWS Lambda Functions trigger given HTTP request type
 * Custom hook in React using Axios to make HTTP requests
 * Stored API Key in AWS Secrets Manager to use within Lambda function
-* Requests/Rsponses to/from Finnhub API through Lambda[^1]
+* Requests/Responses to/from Finnhub API through Lambda after getting unique data from Dynamo[^1]
 * Create Lambda Layer to use Axios
-* Request to Stock Market API in Lambda after reading from DynamoDB
 * GET Request: Displayed different tickers based on users on React client[^2]
 * Refactored the Lambda function, also uploaded repo of it[^3]
 
