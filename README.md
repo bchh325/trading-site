@@ -23,7 +23,7 @@ if the time permits.
 * Requests/Responses to/from Finnhub API through Lambda after getting unique data from Dynamo[^1]
 * Create Lambda Layer to use Axios
 * GET Request: Displayed a user's tickers and the ticker's respective data from Finnhub API on React client[^2]
-* Refactored the Lambda function, also uploaded repo of it[^3]
+* Refactored the GET Lambda function, also uploaded repo of it[^3]
 
 ## Planned Tasks (I always find something to add to this list)
 * Refactor React calls to API Gateway (for increased speed and readability)[^4]
