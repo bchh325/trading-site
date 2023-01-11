@@ -33,7 +33,6 @@ if the time permits.
 * Refactor React calls to API Gateway (for increased speed and readability)[^4]
 * Create a way to get authorization for API Gateway calls without logging in
 * Cache responses to improve load times on subsequent API calls (such as on page change or reload)
-* Create corresponding POST Lambda function to update user's stock tickers
 * Trading functionality after completion of Watchlist
 * Verify valid stock tickers to prevent API calls with an invalid ticker
 
