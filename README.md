@@ -8,14 +8,15 @@ if the time permits.
 ## Technologies Used
 * Node.js
 * React
-* AWS: Lambda/API Gateway/DynamoDB/Cognito/Secrets Manager
+* AWS: Lambda/API Gateway/DynamoDB/Cognito/Secrets Manager/IAM
 * Axios 
 * [Finnhub's Stock Market API](https://finnhub.io/docs/api)
 
 ## Completed Tasks
+* Using IAM to manage authorization across several AWS services
 * User Registration
 * User Authentication
-* HTTP API using API Gateway
+* Created HTTP API and its routes using API Gateway
 * User Authorized API Calls to HTTP API using JWT Token
 * AWS Lambda Functions trigger given HTTP request type
 * Custom hook in React using Axios to make HTTP requests
