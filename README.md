@@ -27,6 +27,8 @@ if the time permits.
 * POST Request: Update/Put user's stock tickers in DynamoDB from React client[^5]
 
 ## Planned Tasks (I always find something to add to this list)
+* Update GET Lambda function to use DynamoDB Document Client
+* Change DynamoDB's ticker attribute to a set instead of list to help deal with redundant data
 * Refactor React calls to API Gateway (for increased speed and readability)[^4]
 * Create a way to get authorization for API Gateway calls without logging in
 * Cache responses to improve load times on subsequent API calls (such as on page change or reload)
