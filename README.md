@@ -33,7 +33,7 @@ if the time permits.
 * Refactor React calls to API Gateway (for increased speed and readability)[^4]
 * Create a way to get authorization for API Gateway calls without logging in (essentially Guest users)
 * Cache responses to improve load times on subsequent API calls (such as on page change or reload)
-* Trading functionality after completion of Watchlist
+* Trading functionality after completion of Watchlist (big IF)
 * Verify valid stock tickers to prevent API calls with an invalid ticker
 
 [^1]: Original approach was to make Finnhub API calls from the client,<br>
