@@ -24,6 +24,7 @@ if the time permits.
 * Create Lambda Layer to use Axios
 * GET Request: Displayed a user's tickers and the ticker's respective data from Finnhub API on React client[^2]
 * Refactored the GET Lambda function, also uploaded repo of it[^3]
+* POST Request: Update/Put user's stock tickers in DynamoDB from React client[^5]
 
 ## Planned Tasks (I always find something to add to this list)
 * Refactor React calls to API Gateway (for increased speed and readability)[^4]
@@ -56,3 +57,5 @@ if the time permits.
 [^4]: The plan is to request from API Gateway as soon as the user logs in, then cache the response. This way,<br>
   When the user get's redirected to the watchlist page (which is where I am currently making the request), <br>
   the data is loaded in much faster. 
+  
+[^5]: https://github.com/bchh325/post-lambda-function
