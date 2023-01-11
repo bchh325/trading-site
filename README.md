@@ -31,7 +31,7 @@ if the time permits.
 * Update GET Lambda function to use DynamoDB Document Client
 * Change DynamoDB's ticker attribute to a set instead of list to help deal with redundant data
 * Refactor React calls to API Gateway (for increased speed and readability)[^4]
-* Create a way to get authorization for API Gateway calls without logging in
+* Create a way to get authorization for API Gateway calls without logging in (essentially Guest users)
 * Cache responses to improve load times on subsequent API calls (such as on page change or reload)
 * Trading functionality after completion of Watchlist
 * Verify valid stock tickers to prevent API calls with an invalid ticker
