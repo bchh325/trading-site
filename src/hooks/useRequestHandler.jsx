@@ -21,7 +21,7 @@ const useRequestHandler = (requestParams) => {
             if (AUTH_KEY !== null) {
                 if (!isCancelled) {
                     let qString = { username: requestParams.data.username }
-                    if (requestParams.type === "GET") {
+                    if (requestParams.type === "POST") {
                         qString = { ...qString, ...{ tickerToAdd: requestParams.data.tickerToAdd } }
                     }
                     const request = {
