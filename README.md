@@ -67,4 +67,4 @@ if the time permits.
 [^6]: https://bchh325.github.io/trading-site/#/ <br>
   The current data in the the "Stock Content" path is NOT coming in from AWS. It is hard-coded data that will be<br>
   used temporarily to apply styling until guest access is implemented. Login and Registration will not look like this<br>
-  in production, this was simply done in a minimal manner to work with Cognito.
+  in final production, this was simply done in a minimal manner to work with Cognito.
