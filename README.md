@@ -33,7 +33,7 @@ https://bchh325.github.io/trading-site/#/ [^6]
 * GET Request: Displayed a user's tickers and the ticker's respective data from Finnhub API on React client[^2]
 * Refactored the GET Lambda function, also uploaded repo of it[^3]
 * POST Request: Update/Put user's stock tickers in DynamoDB from React client[^5]
-* Deployed entire prototype to GitHub Pages[^6]
+* Deployed entire prototype so far to GitHub Pages[^6]
 
 ## Planned Tasks (I always find something to add to this list)
 * Add ability to delete any given ticker
