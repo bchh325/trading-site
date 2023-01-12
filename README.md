@@ -5,7 +5,10 @@ application, a stock market watchlist using several
 services offered by AWS.
 
 Below I try to detail all of my tasks as much as possible to show how
-both the back-end and front-end interacts.
+both the back-end and front-end interacts, as well as what optimizations
+I try to implement to make things easier for me as a developer and to improve
+the experience of the user (such as dealing with load times from subsequent
+API calls).
 
 Optionally, a goal would be to have mimic trading functionality
 if the time permits.
