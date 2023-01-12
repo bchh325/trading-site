@@ -5,6 +5,8 @@ application, a simple stock ticker price tracker.
 Optionally, a goal would be to have mimic trading functionality
 if the time permits.
 
+https://bchh325.github.io/trading-site/#/ [^6]
+
 ## Technologies Used
 * Node.js
 * React
