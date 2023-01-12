@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import useRequestHandler from '../hooks/useRequestHandler'
 import TickerDisplay from './TickerDisplay'
 import styles from './css_modules/StockContent.module.css'
+import UserInput from './UserInput'
 
 export default function StockContent() {
     /*
@@ -89,6 +90,7 @@ export default function StockContent() {
                     return <p key={key}>{key}: {dataString}</p>
                 }
             })} */}
+            <UserInput />
         </div>
     )
 }
