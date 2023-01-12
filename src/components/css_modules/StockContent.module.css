@@ -4,3 +4,34 @@
     row-gap: 5px;
     margin-top: 10px;
 }
+
+.legend-container {
+    display: flex;
+    margin: 0px 40px;
+    flex-direction: row;
+    column-gap: 10px;
+}
+
+.legend-ticker {
+    padding: 10px 0px;
+    color: white;
+    flex: 1 0 150px;
+}
+
+.legend-open {
+    padding: 10px 0px;
+    color: white;
+    flex: 3 0 150px;
+}
+
+.legend-current {
+    padding: 10px 0px;
+    color: white;
+    flex: 3 0 150px;
+}
+
+.legend-pc {
+    padding: 10px 0px;
+    color: white;
+    flex: 1 0 150px;
+}

@@ -28,6 +28,12 @@ export default function StockContent() {
         }
         //Negative Percent Change "c":59.85,"d":-9.43,"dp":-13.6114,"h":69.75,"l":56.4,"o":69.75,"pc":69.28,"t":1673470802
     }
+    const sampleTickerData2 = {
+        "CALX": {
+            "c":59.85,"d":-9.43,"dp":-13.6114,"h":69.75,"l":56.4,"o":69.75,"pc":69.28,"t":1673470802
+        }
+        //Negative Percent Change "c":59.85,"d":-9.43,"dp":-13.6114,"h":69.75,"l":56.4,"o":69.75,"pc":69.28,"t":1673470802
+    }
 
     const [data, setData] = useState(null)
     const [dataNull, setDataNull] = useState(true)
@@ -69,7 +75,14 @@ export default function StockContent() {
 
     return (
         <div className={styles.container}>
+            <div className={styles["legend-container"]}>
+                <span className={styles["legend-ticker"]}>Ticker</span>
+                <span className={styles["legend-open"]}>Open Price</span>
+                <span className={styles["legend-current"]}>Current Price</span>
+                <span className={styles["legend-pc"]}>% Change</span>
+            </div>
             <TickerDisplay tickerData={extractTickerData(sampleTickerData)}/>
+            <TickerDisplay tickerData={extractTickerData(sampleTickerData2)}/>
             {/* { data && Object.keys(data).map((key) => {
                 const dataString = JSON.stringify(data[key])
                 if (data) {

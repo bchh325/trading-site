@@ -1,39 +1,38 @@
 .container {
-    background-color: rgba(0, 0, 0, 0.2);
-    padding: 10px;
     display: flex;
     margin: 0px 40px;
     flex-direction: row;
     column-gap: 10px;
-    border: 2px solid #1abc9c;
-    border-radius: 10px;
+    border-radius: 5px;
+    justify-content: center;
 }
 
 .ticker-symbol {
+    font-weight: bold;
     padding: 10px 0px;
     color: #1abc9c;
     background-color: rgba(0, 0, 0, 0.2);
-    flex-grow: 1;
+    flex: 1 0 150px;
 }
 
 .open-price {
     padding: 10px 0px;
     color: #ecf0f1;
     background-color: rgba(0, 0, 0, 0.2);
-    flex-grow: 3;
+    flex: 3 0 150px;
 }
 
 .current-price {
     padding: 10px 0px;
     color: #ecf0f1;
     background-color: rgba(0, 0, 0, 0.2);
-    flex-grow: 3;
+    flex: 3 0 150px;
 }
 
 .percent-change {
     padding: 10px 0px;
     background-color: rgba(0, 0, 0, 0.2);
-    flex-grow: 1;
+    flex: 1 0 150px;
 }
 
 .percent-red {
