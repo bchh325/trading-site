@@ -1,0 +1,11 @@
+.nav {
+    color: white;
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.nav-button {
+    background-color: aqua;
+}
