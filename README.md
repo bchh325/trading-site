@@ -1,32 +1,40 @@
 # Stock Watchlist
 
-Currently in the works is simple stock ticker price tracking,
-and eventually the goal would be to have mimic trading functionality.
+Currently in the works is my first full-stack 
+application, a simple stock ticker price tracker.
+Optionally, a goal would be to have mimic trading functionality
+if the time permits.
 
 ## Technologies Used
+* Node.js
 * React
-* AWS: Lambda/API Gateway/DynamoDB/Cognito/Secrets Manager
+* AWS: Lambda/API Gateway/DynamoDB/Cognito/Secrets Manager/IAM
 * Axios 
+* [Finnhub's Stock Market API](https://finnhub.io/docs/api)
 
 ## Completed Tasks
+* Using IAM to manage authorization across several AWS services
 * User Registration
 * User Authentication
-* HTTP API using API Gateway
+* Created HTTP API and its routes using API Gateway
 * User Authorized API Calls to HTTP API using JWT Token
 * AWS Lambda Functions trigger given HTTP request type
-* Custom hook using Axios to make HTTP requests
+* Custom hook in React using Axios to make HTTP requests
 * Stored API Key in AWS Secrets Manager to use within Lambda function
-* Refactor/Create custom hook to work with both API Gateway and Stock Market API[^1]
-* Request to Stock Market API in Lambda after reading from DynamoDB
-* GET Request: Displayed different tickers based on users on React client[^2]
+* Requests/Responses to/from Finnhub API through Lambda after getting unique data from Dynamo[^1]
+* Create Lambda Layer to use Axios
+* GET Request: Displayed a user's tickers and the ticker's respective data from Finnhub API on React client[^2]
+* Refactored the GET Lambda function, also uploaded repo of it[^3]
+* POST Request: Update/Put user's stock tickers in DynamoDB from React client[^5]
 
-## Planned Tasks
-* Refactor Lambda Functions
-* Complete POST/GET Lambda Functions to perform CRUD operations on DynamoDB
-* ~~Request to Stock Market API in Lambda after reading from DynamoDB~~
-* ~~Refactor/Create custom hook to work with both API Gateway and Stock Market API~~
-* Trading functionality after completion of Watchlist
-* Add additional API Gateway routes for stock ticker verification
+## Planned Tasks (I always find something to add to this list)
+* Update GET Lambda function to use DynamoDB Document Client
+* Change DynamoDB's ticker attribute to a set instead of list to help deal with redundant data
+* Refactor React calls to API Gateway (for increased speed and readability)[^4]
+* Create a way to get authorization for API Gateway calls without logging in (essentially Guest users)
+* Cache responses to improve load times on subsequent API calls (such as on page change or reload)
+* Trading functionality after completion of Watchlist (big IF)
+* Verify valid stock tickers to prevent API calls with an invalid ticker
 
 [^1]: Original approach was to make Finnhub API calls from the client,<br>
   but given that an API key is required, a new approach<br>
@@ -42,3 +50,14 @@ and eventually the goal would be to have mimic trading functionality.
   5\. Lambda function retreives Finnhub API Key from Secrets Manager<br>
   6\. Lambda function makes Axios API request to Finnhub API using previous API Key and ticker data.<br>
   7\. Stock market data for the given tickers are sent back in the body of the Lambda response<br>
+  
+[^3]: One entire ES module was used initially to get the technologies working.<br>
+  It was then refactored by creating two additional ES modules to handle async<br>
+  tasks. Another additional ES module could be added for Axios.<br>
+  https://github.com/bchh325/get-lambda-function
+  
+[^4]: The plan is to request from API Gateway as soon as the user logs in, then cache the response. This way,<br>
+  When the user get's redirected to the watchlist page (which is where I am currently making the request), <br>
+  the data is loaded in much faster. 
+  
+[^5]: https://github.com/bchh325/post-lambda-function
