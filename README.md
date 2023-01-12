@@ -26,6 +26,7 @@ if the time permits.
 * GET Request: Displayed a user's tickers and the ticker's respective data from Finnhub API on React client[^2]
 * Refactored the GET Lambda function, also uploaded repo of it[^3]
 * POST Request: Update/Put user's stock tickers in DynamoDB from React client[^5]
+* Deployed entire prototype to GitHub Pages[^6]
 
 ## Planned Tasks (I always find something to add to this list)
 * Add ability to delete any given ticker
@@ -62,3 +63,7 @@ if the time permits.
   the data is loaded in much faster. 
   
 [^5]: https://github.com/bchh325/post-lambda-function
+
+[^6]: https://bchh325.github.io/trading-site/#/ <br>
+  The current data in the the "Stock Content" path is NOT coming in from AWS. It is hard-coded data that will be<br>
+  used temporarily to apply styling until guest access is implemented.
