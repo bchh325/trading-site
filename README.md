@@ -4,6 +4,9 @@ Currently in the works is my first full-stack
 application, a stock market watchlist using several
 services offered by AWS.
 
+Below I try to detail all of my tasks as much as possible to show how
+both the back-end and front-end interacts.
+
 Optionally, a goal would be to have mimic trading functionality
 if the time permits.
 
