@@ -56,6 +56,12 @@ export default function Login() {
         try {
             await Auth.signOut();
             localStorage.clear()
+            notification.success({
+                message: 'Succesfully Signed Out!',
+                description: 'Continue as usual...',
+                placement: 'top',
+                duration: 2
+            })
         } catch (error) {
             console.log('error signing out: ', error);
         }
