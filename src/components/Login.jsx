@@ -1,7 +1,6 @@
 import { Auth } from 'aws-amplify';
 import React, { useState } from 'react'
 import { notification } from 'antd';
-import jwtDecode from 'jwt-decode';
 
 export default function Login() {
 
@@ -47,6 +46,21 @@ export default function Login() {
             })
     }
 
+    const handleGuest = async () => {
+        console.log("Guest Handler")
+        const anonymousUser = await Auth.currentCredentials()
+        console.log(anonymousUser)
+    }
+
+    const handleSignOut = async () => {
+        try {
+            await Auth.signOut();
+            localStorage.clear()
+        } catch (error) {
+            console.log('error signing out: ', error);
+        }
+    }
+
     return (
         <div className="">
             Login
@@ -64,6 +78,10 @@ export default function Login() {
                         <input type="submit" />
                     </div>
                 </form>
+
+                <button onClick={handleGuest}>Continue as Guest</button>
+
+                <button onClick={handleSignOut}>Sign Out</button>
             </div>
         </div>
     )

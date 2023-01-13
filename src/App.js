@@ -11,8 +11,6 @@ import StockContent from './components/StockContent';
 Amplify.configure(awsconfig);
 
 function App() {
-  const CognitoUser = null;
-
   return (
     <div className="App">
       <div className="trading-container">
