@@ -1,11 +1,11 @@
 export type AmplifyDependentResourcesAttributes = {
-    "auth": {
-        "tradingAmplifyCognito": {
-            "UserPoolId": "string",
-            "UserPoolArn": "string",
-            "UserPoolName": "string",
-            "AppClientIDWeb": "string",
-            "AppClientID": "string"
-        }
+  "auth": {
+    "tradingAmplifyCognito": {
+      "AppClientID": "string",
+      "AppClientIDWeb": "string",
+      "UserPoolArn": "string",
+      "UserPoolId": "string",
+      "UserPoolName": "string"
     }
+  }
 }

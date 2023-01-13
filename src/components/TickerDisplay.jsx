@@ -2,7 +2,6 @@ import React from 'react'
 import styles from './css_modules/TickerDisplay.module.css'
 
 export default function TickerDisplay({ tickerData }) {
-
     const modifyPercentage = (percentChange) => {
         const sign = percentChange < 0 ? "-" : "+"
         return sign + String(Math.round(Math.abs(percentChange) * 100) / 100) + "%"
