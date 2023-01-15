@@ -37,10 +37,9 @@ https://bchh325.github.io/trading-site/#/ [^6]
 * Refactored the GET Lambda function, also uploaded repo of it[^3]
 * POST Request: Update/Put user's stock tickers in DynamoDB from React client[^5]
 * Deployed entire prototype so far to GitHub Pages[^6]
-* Create a way to get unauthenticated identites for API Gateway calls without logging in (essentially Guest users)[^7]
+* Create a way for unauthenticated identites to make API Gateway calls without logging in (essentially Guest users)
 
 ## Planned Tasks (I always find something to add to this list)
-* Change JWT Auth for endpoints to use a custom Lambda authorizer to authorize both unauthenticated/authenticated identities[^8]
 * Update/Create permissions or Lambda function to handle guest user access to external API calls (Finnhub)
 * Add ability to delete any given ticker
 * Update GET Lambda function to use DynamoDB Document Client
@@ -82,6 +81,3 @@ https://bchh325.github.io/trading-site/#/ [^6]
   in final production, this was simply done in a minimal manner to work with Cognito.
   
 [^7]: Updated User Pool to have an Identity Pool to allow unauthenticated identities and tested it on the React client. <br>
-
-[^8]: Current plan is to get unauthenticated identities access to request from the POST Lambda function through a separate endpoint. <br>
-  After that, I will try to to combine both types of authorizations into a single endpoint.
