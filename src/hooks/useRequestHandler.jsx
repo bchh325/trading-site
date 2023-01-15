@@ -16,7 +16,8 @@ const useRequestHandler = (requestParams) => {
     }
     */
     useEffect(() => {
-        console.log("invoke")
+        console.log("invoke useRequest")
+        
         let isCancelled = false;
         const callApi = async () => {
             if (AUTH_KEY !== null) {
