@@ -47,8 +47,14 @@ export default function Login() {
     }
 
     const handleGuest = async () => {
+        let anonymousUser
+        
         console.log("Guest Handler")
-        const anonymousUser = await Auth.currentCredentials()
+        try {
+            anonymousUser = await Auth.currentCredentials()
+        } catch (err) {
+            console.log(err)
+        }
         console.log(anonymousUser)
     }
 
