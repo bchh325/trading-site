@@ -36,8 +36,8 @@ https://bchh325.github.io/trading-site/#/ [^6]
 * GET Request: Displayed a user's tickers and the ticker's respective data from Finnhub API on React client[^2]
 * Refactored the GET Lambda function, also uploaded repo of it[^3]
 * POST Request: Update/Put user's stock tickers in DynamoDB from React client[^5]
-* Deployed entire prototype so far to GitHub Pages[^6]
-* Create a way for unauthenticated identites to make API Gateway calls without logging in (essentially Guest users)
+* Deployed entire prototype so far to GitHub Pages
+* Created a way for unauthenticated identites to make API Gateway calls without logging in (essentially Guest users)[^8]
 
 ## Planned Tasks (I always find something to add to this list)
 * Update/Create permissions or Lambda function to handle guest user access to external API calls (Finnhub)
@@ -74,10 +74,9 @@ https://bchh325.github.io/trading-site/#/ [^6]
   the data is loaded in much faster. 
   
 [^5]: https://github.com/bchh325/post-lambda-function
-
-[^6]: https://bchh325.github.io/trading-site/#/ <br>
-  The current data in the the "Stock Content" path is NOT coming in from AWS. It is hard-coded data that will be<br>
-  used temporarily to apply styling until guest access is implemented. Login and Registration will not look like this<br>
-  in final production, this was simply done in a minimal manner to work with Cognito.
   
-[^7]: Updated User Pool to have an Identity Pool to allow unauthenticated identities and tested it on the React client. <br>
+[^7]: Updated User Pool to have an Identity Pool to allow unauthenticated identities and grabbed unauthenticated credentials <br>
+  on React client
+  
+[^8]: A completely separate API Gateway endpoint and Lambda function was used. This is the only endpoint that does not have <br>
+  an Authorizer attached and the separate Lambda function limits the AWS services that can be accessed.
