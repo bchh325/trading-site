@@ -9,6 +9,8 @@ export default function UserInput({ dataHandler }) {
   const [tickerInput, setTickerInput] = useState("")
   const AUTH_KEY = localStorage.getItem("AUTH_KEY") 
 
+  let response
+
   const handleInfo = (e) => {
     const { value } = e.target;
     setTickerInput(value.toUpperCase())
@@ -49,7 +51,9 @@ export default function UserInput({ dataHandler }) {
       }
   }
 
-  const response = await axios(request)
+  if (isAuthenticated !== null) {
+    response = await axios(request)
+  }
   const temp = JSON.parse(response.data.body)
   setTickerInput("")
   dataHandler(tickerInput, temp[tickerInput])
