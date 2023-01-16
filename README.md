@@ -15,6 +15,13 @@ if the time permits.
 
 https://bchh325.github.io/trading-site/#/
 
+**If you wish to view a sample user, you can use the following credentials to Sign In or
+you can create your own account:**
+
+**Username: testuser**
+
+**Password: admin123.**
+
 ## Technologies Used
 * Node.js
 * React
