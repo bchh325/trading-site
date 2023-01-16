@@ -23,15 +23,15 @@ export default function Login() {
     const handleLogin = (e) => {
         e.preventDefault()
         console.log(userInfo)
-
+        localStorage.clear()
         Auth.signIn({
             username: userInfo.uname,
             password: userInfo.pass
         })
             .then((user) => {
                 notification.success({
-                    message: 'Succesfully Logged In!',
-                    description: 'Login has been successful, redirecting...',
+                    message: 'Succesfully Signed In!',
+                    description: 'Click on Stock Content to view ticker data',
                     placement: 'top',
                     duration: 2
                 })
@@ -40,6 +40,7 @@ export default function Login() {
                 console.log(user)
                 localStorage.setItem("AUTH_KEY", user.signInUserSession.accessToken.jwtToken)
                 localStorage.setItem("USERNAME", user.username)
+                localStorage.setItem("IS_AUTHENTICATED", JSON.stringify(true))
             })
             .catch((err) => {
                 console.log(err)
@@ -48,10 +49,18 @@ export default function Login() {
 
     const handleGuest = async () => {
         let anonymousUser
-        
+        localStorage.clear()
+        Auth.signOut()
         console.log("Guest Handler")
         try {
             anonymousUser = await Auth.currentCredentials()
+            localStorage.setItem("IS_AUTHENTICATED", JSON.stringify(false))
+            notification.success({
+                message: 'Succesfully got guest credentials',
+                description: 'Guests will not be able to save ticker data, but will still have access to displaying inputted data in Stock Content.',
+                placement: 'top',
+                duration: 3
+            })
         } catch (err) {
             console.log(err)
         }
@@ -68,11 +77,12 @@ export default function Login() {
                 placement: 'top',
                 duration: 2
             })
+            localStorage.setItem("IS_AUTHENTICATED", JSON.stringify(null))
         } catch (error) {
             console.log('error signing out: ', error);
         }
     }
-
+    
     return (
         <div className="">
             Login
@@ -92,7 +102,6 @@ export default function Login() {
                 </form>
 
                 <button onClick={handleGuest}>Continue as Guest</button>
-
                 <button onClick={handleSignOut}>Sign Out</button>
             </div>
         </div>

@@ -25,12 +25,23 @@ export default function Register() {
         e.preventDefault()
         console.log(userInfo
             .confirm)
+        try {
+            Auth.confirmSignUp(userInfo.uname, userInfo.confirm)
+            notification.success({
+                message: 'Verification successful',
+                description: 'Sign In at the Home tab and head to Stock Content',
+                placement: 'top',
+                duration: 1.5
+            })
+        } catch (err) {
+            console.log(err)
+        }
 
-        Auth.confirmSignUp(userInfo.uname, userInfo.confirm)
     }
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        localStorage.clear()
         console.log(userInfo)
 
         Auth.signUp({
@@ -45,7 +56,7 @@ export default function Register() {
                 console.log("success")
                 notification.success({
                     message: 'Succesfully signed up user!',
-                    description: 'Account created successfully, Redirecting you in a few!',
+                    description: 'Account created successfully. Submit your verification code and Sign In.',
                     placement: 'top',
                     duration: 1.5
                 })

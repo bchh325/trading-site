@@ -7,7 +7,6 @@ import axios from 'axios'
 
 export default function UserInput({ dataHandler }) {
   const [tickerInput, setTickerInput] = useState("")
-
   const AUTH_KEY = localStorage.getItem("AUTH_KEY") 
 
   const handleInfo = (e) => {
@@ -16,14 +15,33 @@ export default function UserInput({ dataHandler }) {
   }
 
   const handleSubmit = async (e) => {
+    const isAuthenticated = JSON.parse(localStorage.getItem("IS_AUTHENTICATED")) 
+
+    console.log("Submission")
+    console.log("isAuthenticated: ", isAuthenticated)
+    console.log(typeof isAuthenticated)
+
+    let route, method
+
+    if (isAuthenticated) {
+      console.log("auth routes and method")
+      route = "user/tickers"
+      method = "POST"
+    }
+    else if (!isAuthenticated) {
+      console.log("unauth routes and method")
+      route = "unauthenticated/tickers"
+      method = "GET"
+    }
+
     e.preventDefault()
     console.log("submit")
     const request = {
       host: process.env.REACT_APP_DYNAMOAPI,
-      method: "POST",
+      method: method,
       params: {username: localStorage.getItem("USERNAME"), tickerToAdd: tickerInput.toUpperCase()},
-      url: process.env.REACT_APP_DYNAMOAPI + "/user/tickers",
-      path: "user/tickers",
+      url: process.env.REACT_APP_DYNAMOAPI + "/" + route,
+      path: route,
       headers: {
           'Access-Control-Allow-Origin': '*',
           'Access-Control-Allow-Methods': 'GET,POST,OPTIONS',
@@ -33,6 +51,7 @@ export default function UserInput({ dataHandler }) {
 
   const response = await axios(request)
   const temp = JSON.parse(response.data.body)
+  setTickerInput("")
   dataHandler(tickerInput, temp[tickerInput])
   }
 
