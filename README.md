@@ -15,6 +15,8 @@ if the time permits.
 
 https://bchh325.github.io/trading-site/#/
 
+**The website does not currently display correctly for mobile. I will work on proper CSS styling for mobile devices later**
+
 **If you wish to view a sample user, you can use the following credentials to Sign In or
 you can create your own account:**
 
