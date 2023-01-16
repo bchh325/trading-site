@@ -37,13 +37,14 @@ https://bchh325.github.io/trading-site/#/ [^6]
 * Refactored the GET Lambda function, also uploaded repo of it[^3]
 * POST Request: Update/Put user's stock tickers in DynamoDB from React client[^5]
 * Deployed entire prototype so far to GitHub Pages[^6]
+* Create a way for unauthenticated identites to make API Gateway calls without logging in (essentially Guest users)
 
 ## Planned Tasks (I always find something to add to this list)
+* Update/Create permissions or Lambda function to handle guest user access to external API calls (Finnhub)
 * Add ability to delete any given ticker
 * Update GET Lambda function to use DynamoDB Document Client
 * Change DynamoDB's ticker attribute to a set instead of list to help deal with redundant data
 * Refactor React calls to API Gateway (for increased speed and readability)[^4]
-* Create a way to get authorization for API Gateway calls without logging in (essentially Guest users)
 * Cache responses to improve load times on subsequent API calls (such as on page change or reload)
 * Trading functionality after completion of Watchlist (big IF)
 * Verify valid stock tickers to prevent API calls with an invalid ticker
@@ -78,3 +79,5 @@ https://bchh325.github.io/trading-site/#/ [^6]
   The current data in the the "Stock Content" path is NOT coming in from AWS. It is hard-coded data that will be<br>
   used temporarily to apply styling until guest access is implemented. Login and Registration will not look like this<br>
   in final production, this was simply done in a minimal manner to work with Cognito.
+  
+[^7]: Updated User Pool to have an Identity Pool to allow unauthenticated identities and tested it on the React client. <br>
