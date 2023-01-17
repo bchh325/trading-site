@@ -4,10 +4,10 @@ https://bchh325.github.io/trading-site/#/
 
 Currently in the works is my first full-stack 
 application, a stock market watchlist using several
-services offered by AWS. It includes fully unique watchlist
-ticker data for each Cognito User, which is stored in DynamoDB.
-HTTP API was made in API Gateway with JWT Authorization for users,
-and Lambda functions were integrated at different endpoints to perform
+services offered by AWS as a back-end and with React as its front-end. 
+It includes fully unique watchlist ticker data for each Cognito User, 
+which is stored in DynamoDB. HTTP API was made in API Gateway with JWT Authorization 
+for users, and Lambda functions were integrated at different endpoints to perform
 operations on DynamoDB.
 
 Below I try to detail all of my tasks as much as possible to show how
