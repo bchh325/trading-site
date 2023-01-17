@@ -17,8 +17,7 @@ https://bchh325.github.io/trading-site/#/
 
 **The website does not currently display correctly for mobile. I will work on proper CSS styling for mobile devices later**
 
-**If you wish to view a sample user, you can use the following credentials to Sign In or
-you can create your own account:**
+**If you wish to view a sample user, you can use the following credentials to Sign In:**
 
 **Username: testuser**
 
@@ -49,6 +48,7 @@ you can create your own account:**
 * Created a way for unauthenticated identites to make API Gateway calls without logging in (essentially Guest users)[^8]
 
 ## Planned Tasks (I always find something to add to this list)
+* Fix styling for Stock Content
 * Update/Create permissions or Lambda function to handle guest user access to external API calls (Finnhub)
 * Add ability to delete any given ticker
 * Update GET Lambda function to use DynamoDB Document Client
