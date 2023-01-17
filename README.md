@@ -1,8 +1,14 @@
 # Stock Watchlist
 
+https://bchh325.github.io/trading-site/#/
+
 Currently in the works is my first full-stack 
 application, a stock market watchlist using several
-services offered by AWS.
+services offered by AWS as a back-end and with React as its front-end. 
+It includes fully unique watchlist ticker data for each Cognito User, 
+which is stored in DynamoDB. HTTP API was made in API Gateway with JWT Authorization 
+for users, and Lambda functions using Node.js 18 were integrated at different endpoints to perform
+operations on DynamoDB.
 
 Below I try to detail all of my tasks as much as possible to show how
 both the back-end and front-end interacts, as well as what optimizations
@@ -12,8 +18,6 @@ API calls).
 
 Optionally, a goal would be to have mimic trading functionality
 if the time permits.
-
-https://bchh325.github.io/trading-site/#/
 
 **If you wish to view a sample user, you can use the following credentials to Sign In:**
 
@@ -49,7 +53,7 @@ https://bchh325.github.io/trading-site/#/
 
 ## Planned Tasks (I always find something to add to this list)
 * Update Lambda function to handle tickers that cannot be requested (e.g. FXAIX causes app to break)
-* Re-style Stock Content to be a scrollable container to prevent overflow with large amount of stocks
+* Re-style Stock Content to be a scrollable flex container to prevent overflow with large amount of stocks
 * Manage which buttons are showed to user based on state (e.g. Stock Content only available when user is a guest or signed in)
 * Create confirmation code pop-up upon registration
 * Add confirm password input field
@@ -91,4 +95,4 @@ https://bchh325.github.io/trading-site/#/
   on React client
   
 [^8]: A completely separate API Gateway endpoint and Lambda function was used. This is the only endpoint that does not have <br>
-  an Authorizer attached and the separate Lambda function limits the AWS services that can be accessed.
+  an authorizer attached and the separate Lambda function limits the AWS services that can be accessed.
