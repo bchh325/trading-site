@@ -48,6 +48,7 @@ https://bchh325.github.io/trading-site/#/
 * Created separate Lambda function to handle guest user access to external API calls (Finnhub)
 
 ## Planned Tasks (I always find something to add to this list)
+* Update Lambda function to handle tickers that cannot be requested (e.g. FXAIX causes app to break)
 * Re-style Stock Content to be a scrollable container to prevent overflow with large amount of stocks
 * Manage which buttons are showed to user based on state (e.g. Stock Content only available when user is a guest or signed in)
 * Create confirmation code pop-up upon registration
