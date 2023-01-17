@@ -95,4 +95,4 @@ if the time permits.
   on React client
   
 [^8]: A completely separate API Gateway endpoint and Lambda function was used. This is the only endpoint that does not have <br>
-  an Authorizer attached and the separate Lambda function limits the AWS services that can be accessed.
+  an authorizer attached and the separate Lambda function limits the AWS services that can be accessed.
