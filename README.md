@@ -1,8 +1,14 @@
 # Stock Watchlist
 
+https://bchh325.github.io/trading-site/#/
+
 Currently in the works is my first full-stack 
 application, a stock market watchlist using several
-services offered by AWS.
+services offered by AWS. It includes fully unique watchlist
+ticker data for each Cognito User, which is stored in DynamoDB.
+HTTP API was made in API Gateway with JWT Authorization for users,
+and Lambda functions were integrated at different endpoints to perform
+operations on DynamoDB.
 
 Below I try to detail all of my tasks as much as possible to show how
 both the back-end and front-end interacts, as well as what optimizations
@@ -12,8 +18,6 @@ API calls).
 
 Optionally, a goal would be to have mimic trading functionality
 if the time permits.
-
-https://bchh325.github.io/trading-site/#/
 
 **If you wish to view a sample user, you can use the following credentials to Sign In:**
 
