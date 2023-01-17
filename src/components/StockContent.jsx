@@ -6,54 +6,6 @@ import styles from './css_modules/StockContent.module.css'
 import UserInput from './UserInput'
 
 export default function StockContent() {
-    /*
-    requestParams = {
-        type: "GET" (HTTP REQUEST TYPE: GET/POST/etc.),
-        route: "user/tickers" (DESIRED ROUTE),
-        data: (state){
-            username: testUsername,
-            tickerToAdd: "AAPL"
-        }
-    }
-    */
-    const sampleTickerData = {
-        "TQQQ": {
-            "c": 19.41,
-            "d": 0.92,
-            "dp": 4.9757,
-            "h": 19.435,
-            "l": 18.52,
-            "o": 18.685,
-            "pc": 18.49,
-            "t": 1673470804
-        }
-        //Negative Percent Change "c":59.85,"d":-9.43,"dp":-13.6114,"h":69.75,"l":56.4,"o":69.75,"pc":69.28,"t":1673470802
-    }
-    const sampleTickerData2 = {
-        "CALX": {
-            "c": 59.85, "d": -9.43, "dp": -13.6114, "h": 69.75, "l": 56.4, "o": 69.75, "pc": 69.28, "t": 1673470802
-        }
-        //Negative Percent Change "c":59.85,"d":-9.43,"dp":-13.6114,"h":69.75,"l":56.4,"o":69.75,"pc":69.28,"t":1673470802
-    }
-
-    const multipleTicker = {
-        "TQQQ": {
-            "c": 19.41,
-            "d": 0.92,
-            "dp": 4.9757,
-            "h": 19.435,
-            "l": 18.52,
-            "o": 18.685,
-            "pc": 18.49,
-            "t": 1673470804
-        }, "CALX": {
-            "c": 59.85, "d": -9.43, "dp": -13.6114, "h": 69.75, "l": 56.4, "o": 69.75, "pc": 69.28, "t": 1673470802
-        },
-        "CALX": {
-            "c": 59.85, "d": -9.43, "dp": -13.6114, "h": 69.75, "l": 56.4, "o": 69.75, "pc": 69.28, "t": 1673470802
-        }
-    }
-
     const [data, setData] = useState(null)
     const [dataNull, setDataNull] = useState(true)
     const [inputParams, setInputParams] = useState({
@@ -73,20 +25,6 @@ export default function StockContent() {
         }))
     }
 
-    /*
-    {
-        "ABC": {
-            "c": 164.9,
-            "d": -0.49,
-            "dp": -0.2963,
-            "h": 165.965,
-            "l": 164.12,
-            "o": 165.26,
-            "pc": 165.39,
-            "t": 1673557202
-        }
-    }
-    */
     const [response] = useRequestHandler(requestParams)
     //refactoring planned
     useEffect(() => {

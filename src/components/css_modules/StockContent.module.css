@@ -6,32 +6,34 @@
 }
 
 .legend-container {
+    flex: 1;
     display: flex;
     margin: 0px 40px;
     flex-direction: row;
     column-gap: 10px;
+    justify-content: center;
 }
 
 .legend-ticker {
     padding: 10px 0px;
-    color: white;
-    flex: 1 0 150px;
+    color: #2c3e50;
+    flex: 1 0 25%
 }
 
 .legend-open {
     padding: 10px 0px;
-    color: white;
-    flex: 3 0 150px;
+    color: #2c3e50;
+    flex: 2 0 25%
 }
 
 .legend-current {
     padding: 10px 0px;
-    color: white;
-    flex: 3 0 150px;
+    color: #2c3e50;
+    flex: 2 0 25%
 }
 
 .legend-pc {
     padding: 10px 0px;
-    color: white;
-    flex: 1 0 150px;
+    color: #2c3e50;
+    flex: 1 0 25%
 }
