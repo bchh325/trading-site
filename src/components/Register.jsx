@@ -1,6 +1,7 @@
 import { Auth } from 'aws-amplify';
 import React, { useState } from 'react'
 import { notification } from 'antd';
+import styles from './css_modules/Register.module.css'
 
 export default function Register() {
 
@@ -64,34 +65,60 @@ export default function Register() {
     }
 
     return (
-        <div className="">
+        // <div className="">
+        //     <div className="">
+        //         <form onSubmit={handleSubmit}>
+        //             <div className="input-container">
+        //                 <label>Email </label>
+        //                 <input type="email" name="email" value={userInfo.email} onChange={handleInfo} required />
+        //             </div>
+        //             <div className="input-container">
+        //                 <label>Username </label>
+        //                 <input type="text" name="uname" value={userInfo.uname} onChange={handleInfo} required />
+        //             </div>
+        //             <div className="input-container">
+        //                 <label>Password </label>
+        //                 <input type="password" name="pass" value={userInfo.pass} onChange={handleInfo} required />
+        //             </div>
+        //             <div className="button-container">
+        //                 <input type="submit" />
+        //             </div>
+        //         </form>
+        //         <br />
+        //         <form onSubmit={handleConfirm}>
+        //             <div className="input-container">
+        //                 <label>Confirm Code </label>
+        //                 <input type="number" name="confirm" value={userInfo.confirm} onChange={handleInfo} required />
+        //             </div>
+        //             <div className="button-container">
+        //                 <input type="submit" />
+        //             </div>
+        //         </form>
+        //     </div>
+        // </div>
+        <div className={styles["register-container"]}>
+            <span className={styles["register-label"]}>Register</span>
             <div className="">
-                <form onSubmit={handleSubmit}>
-                    <div className="input-container">
-                        <label>Email </label>
-                        <input type="email" name="email" value={userInfo.email} onChange={handleInfo} required />
+                <form onSubmit={handleSubmit} autoComplete="off" >
+                    <div className={styles["group"]}>
+                        <input className={styles["user-input"]} type="email" name="email" value={userInfo.email} onChange={handleInfo} required />
+                        <span className={styles.highlight}></span>
+                        <span className={styles.bar}></span>
+                        <label className={styles.label}>Email</label>
                     </div>
-                    <div className="input-container">
-                        <label>Username </label>
-                        <input type="text" name="uname" value={userInfo.uname} onChange={handleInfo} required />
+                    <div className={styles["group"]}>
+                        <input className={styles["user-input"]} type="text" name="uname" value={userInfo.uname} onChange={handleInfo} required />
+                        <span className={styles.highlight}></span>
+                        <span className={styles.bar}></span>
+                        <label className={styles.label}>Username</label>
                     </div>
-                    <div className="input-container">
-                        <label>Password </label>
-                        <input type="password" name="pass" value={userInfo.pass} onChange={handleInfo} required />
+                    <div className={styles["group"]}>
+                        <input className={styles["user-input"]} type="password" name="pass" value={userInfo.pass} onChange={handleInfo} required />
+                        <span className={styles.highlight}></span>
+                        <span className={styles.bar}></span>
+                        <label className={styles.label}>Password</label>
                     </div>
-                    <div className="button-container">
-                        <input type="submit" />
-                    </div>
-                </form>
-                <br />
-                <form onSubmit={handleConfirm}>
-                    <div className="input-container">
-                        <label>Confirm Code </label>
-                        <input type="number" name="confirm" value={userInfo.confirm} onChange={handleInfo} required />
-                    </div>
-                    <div className="button-container">
-                        <input type="submit" />
-                    </div>
+                    <button type="submit" className={styles.submit}><span>Register</span></button>
                 </form>
             </div>
         </div>

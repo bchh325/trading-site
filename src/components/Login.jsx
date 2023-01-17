@@ -1,6 +1,7 @@
 import { Auth } from 'aws-amplify';
 import React, { useState } from 'react'
 import { notification } from 'antd';
+import styles from './css_modules/Login.module.css'
 
 export default function Login() {
 
@@ -75,34 +76,36 @@ export default function Login() {
                 message: 'Succesfully Signed Out!',
                 description: 'Continue as usual...',
                 placement: 'top',
-                duration: 2
+                duration: 1.5
             })
             localStorage.setItem("IS_AUTHENTICATED", JSON.stringify(null))
         } catch (error) {
             console.log('error signing out: ', error);
         }
     }
-    
-    return (
-        <div className="">
-            Login
-            <div className="">
-                <form onSubmit={handleLogin}>
-                    <div className="input-container">
-                        <label>Username </label>
-                        <input type="text" name="uname" value={userInfo.uname} onChange={handleInfo} required />
-                    </div>
-                    <div className="input-container">
-                        <label>Password </label>
-                        <input type="password" name="pass" value={userInfo.pass} onChange={handleInfo} required />
-                    </div>
-                    <div className="button-container">
-                        <input type="submit" />
-                    </div>
-                </form>
 
-                <button onClick={handleGuest}>Continue as Guest</button>
-                <button onClick={handleSignOut}>Sign Out</button>
+    return (
+        <div className={styles["login-container"]}>
+            <span className={styles["login-label"]}>Sign In</span>
+            <div className="">
+                <form onSubmit={handleLogin} autoComplete="off" >
+                    <div className={styles["group"]}>
+                        <input className={styles["user-input"]} type="text" name="uname" value={userInfo.uname} onChange={handleInfo} required />
+                        <span className={styles.highlight}></span>
+                        <span className={styles.bar}></span>
+                        <label className={styles.label}>Username</label>
+                    </div>
+                    <div className={styles["group"]}>
+                        <input className={styles["user-input"]} type="password" name="pass" value={userInfo.pass} onChange={handleInfo} required />
+                        <span className={styles.highlight}></span>
+                        <span className={styles.bar}></span>
+                        <label className={styles.label}>Password</label>
+                    </div>
+                    <button type="submit" className={styles.submit}><span>Sign In</span></button>
+                </form>
+                <div className={styles["button-container"]}>
+                    <button className={`${styles.submit} ${styles["guest-button"]}`} onClick={handleGuest}>Continue as Guest</button>
+                </div>
             </div>
         </div>
     )
