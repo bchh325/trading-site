@@ -49,6 +49,7 @@ you can create your own account:**
 * Created a way for unauthenticated identites to make API Gateway calls without logging in (essentially Guest users)[^8]
 
 ## Planned Tasks (I always find something to add to this list)
+* Fix styling for Stock Content
 * Update/Create permissions or Lambda function to handle guest user access to external API calls (Finnhub)
 * Add ability to delete any given ticker
 * Update GET Lambda function to use DynamoDB Document Client
