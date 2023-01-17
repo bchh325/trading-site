@@ -15,8 +15,6 @@ if the time permits.
 
 https://bchh325.github.io/trading-site/#/
 
-**The website does not currently display correctly for mobile. I will work on proper CSS styling for mobile devices later**
-
 **If you wish to view a sample user, you can use the following credentials to Sign In:**
 
 **Username: testuser**
@@ -46,10 +44,13 @@ https://bchh325.github.io/trading-site/#/
 * POST Request: Update/Put user's stock tickers in DynamoDB from React client[^5]
 * Deployed entire prototype so far to GitHub Pages
 * Created a way for unauthenticated identites to make API Gateway calls without logging in (essentially Guest users)[^8]
+* Fixed styling for Stock Content to correct display on mobile devices
+* Created separate Lambda function to handle guest user access to external API calls (Finnhub)
 
 ## Planned Tasks (I always find something to add to this list)
-* Fix styling for Stock Content
-* Update/Create permissions or Lambda function to handle guest user access to external API calls (Finnhub)
+* Manage which buttons are showed to user based on state (e.g. Stock Content only available when user is a guest or signed in)
+* Create confirmation code pop-up upon registration
+* Add confirm password input field
 * Add ability to delete any given ticker
 * Update GET Lambda function to use DynamoDB Document Client
 * Change DynamoDB's ticker attribute to a set instead of list to help deal with redundant data
