@@ -8,7 +8,7 @@ services offered by AWS as a back-end and with React as its front-end.
 It includes fully unique watchlist ticker data for each Cognito User, 
 which is stored in DynamoDB. HTTP API was made in API Gateway with JWT Authorization 
 for users, and Lambda functions using Node.js 18 were integrated at different endpoints to perform
-operations on DynamoDB.
+operations on DynamoDB using AWS SDK v3.
 
 Below I try to detail all of my tasks as much as possible to show how
 both the back-end and front-end interacts, as well as what optimizations
