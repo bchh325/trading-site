@@ -19,25 +19,25 @@ export default function UserInput({ dataHandler }) {
   const handleSubmit = async (e) => {
     const isAuthenticated = JSON.parse(localStorage.getItem("IS_AUTHENTICATED")) 
 
-    console.log("Submission")
-    console.log("isAuthenticated: ", isAuthenticated)
-    console.log(typeof isAuthenticated)
+    //console.log("Submission")
+    //console.log("isAuthenticated: ", isAuthenticated)
+    //console.log(typeof isAuthenticated)
 
     let route, method
 
     if (isAuthenticated) {
-      console.log("auth routes and method")
+      //console.log("auth routes and method")
       route = "user/tickers"
       method = "POST"
     }
     else if (!isAuthenticated) {
-      console.log("unauth routes and method")
+      //console.log("unauth routes and method")
       route = "unauthenticated/tickers"
       method = "GET"
     }
 
     e.preventDefault()
-    console.log("submit")
+    //console.log("submit")
     const request = {
       host: process.env.REACT_APP_DYNAMOAPI,
       method: method,

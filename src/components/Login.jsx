@@ -23,7 +23,7 @@ export default function Login() {
 
     const handleLogin = (e) => {
         e.preventDefault()
-        console.log(userInfo)
+        //console.log(userInfo)
         localStorage.clear()
         Auth.signIn({
             username: userInfo.uname,
@@ -37,14 +37,14 @@ export default function Login() {
                     duration: 2
                 })
 
-                console.log(user.signInUserSession)
-                console.log(user)
+                //console.log(user.signInUserSession)
+                //console.log(user)
                 localStorage.setItem("AUTH_KEY", user.signInUserSession.accessToken.jwtToken)
                 localStorage.setItem("USERNAME", user.username)
                 localStorage.setItem("IS_AUTHENTICATED", JSON.stringify(true))
             })
             .catch((err) => {
-                console.log(err)
+                //console.log(err)
             })
     }
 
@@ -52,7 +52,7 @@ export default function Login() {
         let anonymousUser
         localStorage.clear()
         Auth.signOut()
-        console.log("Guest Handler")
+        //console.log("Guest Handler")
         try {
             anonymousUser = await Auth.currentCredentials()
             localStorage.setItem("IS_AUTHENTICATED", JSON.stringify(false))
@@ -63,9 +63,9 @@ export default function Login() {
                 duration: 3
             })
         } catch (err) {
-            console.log(err)
+            //console.log(err)
         }
-        console.log(anonymousUser)
+        //console.log(anonymousUser)
     }
 
     const handleSignOut = async () => {
@@ -80,7 +80,7 @@ export default function Login() {
             })
             localStorage.setItem("IS_AUTHENTICATED", JSON.stringify(null))
         } catch (error) {
-            console.log('error signing out: ', error);
+            //console.log('error signing out: ', error);
         }
     }
 

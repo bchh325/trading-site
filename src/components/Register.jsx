@@ -24,10 +24,8 @@ export default function Register() {
     }
 
     const handleConfirm = async (e) => {
-        console.log("confirm")
+        //console.log("confirm")
         e.preventDefault()
-        console.log(userInfo
-            .confirm)
         try {
             await Auth.confirmSignUp(userInfo.uname, userInfo.confirm)
             notification.success({
@@ -44,7 +42,7 @@ export default function Register() {
                 confirm: ""
             })
         } catch (err) {
-            console.log(err)
+            //console.log(err)
             notification.error({
                 message: 'Verification Failed',
                 description: 'Double check your confirmation code',
@@ -58,7 +56,7 @@ export default function Register() {
     const handleSubmit = (e) => {
         e.preventDefault()
         localStorage.clear()
-        console.log(userInfo)
+        //console.log(userInfo)
 
         Auth.signUp({
             username: userInfo.uname,
@@ -69,7 +67,7 @@ export default function Register() {
             }
         })
             .then(() => {
-                console.log("success")
+                //console.log("success")
                 setUserInfo({
                     ...userInfo,
                     confirm: ""

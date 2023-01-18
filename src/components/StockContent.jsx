@@ -29,7 +29,7 @@ export default function StockContent() {
     //refactoring planned
     useEffect(() => {
         if (response !== null && requestParams.type !== "POST") {
-            console.log(JSON.parse(response.data.body))
+            //console.log(JSON.parse(response.data.body))
             setData(JSON.parse(response.data.body))
             setDataNull(false)
         }
@@ -44,11 +44,11 @@ export default function StockContent() {
             percentChange: tickerObject.dp
         }
     }
-    console.log(data)
+    //console.log(data)
 
-    console.log("IN", typeof data)
+    //console.log("IN", typeof data)
     if (data !== null) {
-        console.log(Object.keys(data))
+        //console.log(Object.keys(data))
     }
 
     return (
