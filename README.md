@@ -25,6 +25,9 @@ if the time permits.
 
 **Password: admin123.**
 
+<img src="https://i.imgur.com/IEuqWFB.png" alt="Sign In Page" width="500" title="Sign In Page">
+<img src="https://i.imgur.com/yFEqtfY.png" alt="Stock Content Page" width="500" title="Stock Content Page">
+
 ## Technologies Used
 * Node.js
 * React
