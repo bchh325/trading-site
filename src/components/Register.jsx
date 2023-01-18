@@ -1,10 +1,11 @@
 import { Auth } from 'aws-amplify';
 import React, { useState } from 'react'
-import { notification } from 'antd';
+import { notification, Modal } from 'antd';
 import styles from './css_modules/Register.module.css'
 
 export default function Register() {
 
+    const [isModalOpen, setIsModalOpen] = useState(false)
     const [userInfo, setUserInfo] = useState(
         {
             uname: "",
@@ -22,20 +23,34 @@ export default function Register() {
         })
     }
 
-    const handleConfirm = (e) => {
+    const handleConfirm = async (e) => {
+        console.log("confirm")
         e.preventDefault()
         console.log(userInfo
             .confirm)
         try {
-            Auth.confirmSignUp(userInfo.uname, userInfo.confirm)
+            await Auth.confirmSignUp(userInfo.uname, userInfo.confirm)
             notification.success({
                 message: 'Verification successful',
-                description: 'Sign In at the Home tab and head to Stock Content',
+                description: 'Sign in and head to Stock Content',
                 placement: 'top',
-                duration: 1.5
+                duration: 2.5
+            })
+            setIsModalOpen(false)
+            setUserInfo({
+                uname: "",
+                pass: "",
+                email: "",
+                confirm: ""
             })
         } catch (err) {
             console.log(err)
+            notification.error({
+                message: 'Verification Failed',
+                description: 'Double check your confirmation code',
+                placement: 'top',
+                duration: 1.8
+            })
         }
 
     }
@@ -55,51 +70,28 @@ export default function Register() {
         })
             .then(() => {
                 console.log("success")
-                notification.success({
-                    message: 'Succesfully signed up user!',
-                    description: 'Account created successfully. Submit your verification code and Sign In.',
-                    placement: 'top',
-                    duration: 1.5
+                setUserInfo({
+                    ...userInfo,
+                    confirm: ""
                 })
+                setIsModalOpen(true)
             })
     }
 
     return (
-        // <div className="">
-        //     <div className="">
-        //         <form onSubmit={handleSubmit}>
-        //             <div className="input-container">
-        //                 <label>Email </label>
-        //                 <input type="email" name="email" value={userInfo.email} onChange={handleInfo} required />
-        //             </div>
-        //             <div className="input-container">
-        //                 <label>Username </label>
-        //                 <input type="text" name="uname" value={userInfo.uname} onChange={handleInfo} required />
-        //             </div>
-        //             <div className="input-container">
-        //                 <label>Password </label>
-        //                 <input type="password" name="pass" value={userInfo.pass} onChange={handleInfo} required />
-        //             </div>
-        //             <div className="button-container">
-        //                 <input type="submit" />
-        //             </div>
-        //         </form>
-        //         <br />
-        //         <form onSubmit={handleConfirm}>
-        //             <div className="input-container">
-        //                 <label>Confirm Code </label>
-        //                 <input type="number" name="confirm" value={userInfo.confirm} onChange={handleInfo} required />
-        //             </div>
-        //             <div className="button-container">
-        //                 <input type="submit" />
-        //             </div>
-        //         </form>
-        //     </div>
-        // </div>
         <div className={styles["register-container"]}>
             <span className={styles["register-label"]}>Register</span>
             <div className="">
                 <form onSubmit={handleSubmit} autoComplete="off" >
+                    <Modal open={isModalOpen} onOk={handleConfirm} onCancel={() => { setIsModalOpen(false) }} footer={null}>
+                        <div className={styles["group"]}>
+                            <input className={styles["user-input"]} type="number" name="confirm" value={userInfo.confirm} onChange={handleInfo} required />
+                            <span className={styles.highlight}></span>
+                            <span className={styles.bar}></span>
+                            <label className={styles.label}>Confirmation Code</label>
+                        </div>
+                        <button onClick={handleConfirm} className={styles.submit}><span>Confirm</span></button>
+                    </Modal>
                     <div className={styles["group"]}>
                         <input className={styles["user-input"]} type="email" name="email" value={userInfo.email} onChange={handleInfo} required />
                         <span className={styles.highlight}></span>

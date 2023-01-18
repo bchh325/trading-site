@@ -200,3 +200,8 @@
 .button-container {
     margin-top: 50px;
 }
+
+.antd-modal {
+    width: 100%;
+    background-color: green;
+}
