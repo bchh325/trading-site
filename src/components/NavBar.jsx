@@ -8,7 +8,7 @@ export default function NavBar() {
         <div className={styles.nav}>
             <NavLink className={styles["nav-button"]} exact="true" to="/"><span>Sign In</span></NavLink>
             <NavLink className={styles["nav-button"]} to="/register"><span>Register</span></NavLink>
-            <NavLink className={styles["nav-button"]} to="/stocks"><span>Stock Content</span>t</NavLink>
+            <NavLink className={styles["nav-button"]} to="/stocks"><span>Stock Content</span></NavLink>
         </div>
     )
 }
