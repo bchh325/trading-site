@@ -104,7 +104,7 @@ export default function Login() {
                     <button type="submit" className={styles.submit}><span>Sign In</span></button>
                 </form>
                 <div className={styles["button-container"]}>
-                    <button className={`${styles.submit} ${styles["guest-button"]}`} onClick={handleGuest}><span>Continue as Guest</span></button>
+                    <button className={styles.submit} onClick={handleGuest}><span>Continue as Guest</span></button>
                 </div>
             </div>
         </div>
