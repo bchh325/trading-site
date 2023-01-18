@@ -16,6 +16,8 @@ I try to implement to make things easier for me as a developer and to improve
 the experience of the user (such as dealing with load times from subsequent
 API calls).
 
+Repos for the Lambda functions can be found at the bottom.
+
 Optionally, a goal would be to have mimic trading functionality
 if the time permits.
 
