@@ -50,12 +50,12 @@ if the time permits.
 * Created a way for unauthenticated identites to make API Gateway calls without logging in (essentially Guest users)[^8]
 * Fixed styling for Stock Content to correct display on mobile devices
 * Created separate Lambda function to handle guest user access to external API calls (Finnhub)
+* Create confirmation code pop-up upon registration
 
 ## Planned Tasks (I always find something to add to this list)
 * Update Lambda function to handle tickers that cannot be requested (e.g. FXAIX causes app to break)
 * Re-style Stock Content to be a scrollable flex container to prevent overflow with large amount of stocks
 * Manage which buttons are showed to user based on state (e.g. Stock Content only available when user is a guest or signed in)
-* Create confirmation code pop-up upon registration
 * Add confirm password input field
 * Add ability to delete any given ticker
 * Update GET Lambda function to use DynamoDB Document Client
