@@ -60,7 +60,7 @@ export default function StockContent() {
                 <span className={styles["legend-pc"]}>% Change</span>
             </div>
             {data && Object.keys(data).map((key) => {
-                return <TickerDisplay tickerData={extractTickerData({ [key]: data[key] })} />
+                return <TickerDisplay key={key} tickerData={extractTickerData({ [key]: data[key] })} />
             })}
             <UserInput dataHandler={handleSetData}/>
         </div>

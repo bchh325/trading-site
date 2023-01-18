@@ -53,27 +53,37 @@ export default function Register() {
 
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
         localStorage.clear()
         //console.log(userInfo)
+        try {
+            await Auth.signUp({
+                username: userInfo.uname,
+                password: userInfo.pass,
 
-        Auth.signUp({
-            username: userInfo.uname,
-            password: userInfo.pass,
-
-            attributes: {
-                email: userInfo.email
-            }
-        })
-            .then(() => {
-                //console.log("success")
-                setUserInfo({
-                    ...userInfo,
-                    confirm: ""
-                })
-                setIsModalOpen(true)
+                attributes: {
+                    email: userInfo.email
+                }
             })
+                .then(() => {
+                    //console.log("success")
+                    setUserInfo({
+                        ...userInfo,
+                        confirm: ""
+                    })
+                    setIsModalOpen(true)
+                })
+        } catch (err) {
+            notification.error({
+                message: 'Registration Failed',
+                description: err.message,
+                placement: 'top',
+                duration: 2.5
+            })
+            console.log(Object.getOwnPropertyNames(err))
+            console.log(err.message)
+        }
     }
 
     return (
