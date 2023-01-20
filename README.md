@@ -1,6 +1,6 @@
 # Stock Watchlist
 
-**View the app here! https://bchh325.github.io/trading-site/#/**
+## **View the app here! https://bchh325.github.io/trading-site/#/**
 
 Currently in the works is my first full-stack 
 application, a stock market watchlist using several
