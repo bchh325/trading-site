@@ -1,6 +1,9 @@
 # Stock Watchlist
 
 ## **View the app here! https://bchh325.github.io/trading-site/#/**
+*Note (01/23/23): My semester has started, so I will rarely have time to implement what I want here.* <br>
+*I will prioritize learning new technologies and implementing what I know in a better way in my most recent* <br>
+*spotify-distribution repository and come back to this occasionally.*
 
 Currently in the works is my first full-stack 
 application, a stock market watchlist using several
